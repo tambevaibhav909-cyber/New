@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Clean & Green - Smart Waste Management</title>
+  <style>
+    /* Basic Reset */
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f4f4f4;
+      color: #333;
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+    .container {
+      width: 90%;
+      max-width: 1100px;
+      margin: auto;
+    }
+    header {
+      background: #2c3e50;
+      color: white;
+      padding: 2.5rem 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    header h1 {
+      font-size: 2.2rem;
+      margin-left: 20px;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      margin-right: 20px;
+    }
+    nav ul li {
+      margin-left: 25px;
+    }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1rem;
+      transition: color 0.3s;
+    }
+    nav ul li a:hover {
+      color: #27ae60;
+    }
+
+    /* Hero */
+    .hero {
+      background: url('https://source.unsplash.com/1600x600/?waste,recycle') no-repeat center/cover;
+      height: 70vh;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero h2 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      animation: fadeInDown 1s ease forwards;
+      opacity: 0;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+      max-width: 600px;
+      animation: fadeInUp 1.2s ease forwards;
+      opacity: 0;
+    }
+    .hero .btn {
+      background: #27ae60;
+      padding: 15px 30px;
+      border-radius: 5px;
+      color: white;
+      font-weight: bold;
+      font-size: 1.1rem;
+      text-decoration: none;
+      box-shadow: 0 4px 8px rgba(39, 174, 96, 0.4);
+      transform: translateY(50px);
+      opacity: 0;
+      animation: slideUpFadeIn 1.5s ease forwards;
+      cursor: pointer;
+      transition: background 0.3s;
+      border: none;
+    }
+    .hero .btn:hover {
+      background: #219150;
+    }
+    @keyframes fadeInDown {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+    }
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+    }
+    @keyframes slideUpFadeIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      from {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+    }
+
+    /* Features Section */
+    .section {
+      padding: 60px 0;
+      text-align: center;
+    }
+    .section h3 {
+      margin-bottom: 40px;
+      font-size: 2rem;
+      color: #2c3e50;
+    }
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 25px;
+    }
+    .feature-btn {
+      background: #27ae60;
+      color: white;
+      padding: 20px 30px;
+      border-radius: 10px;
+      font-size: 1.1rem;
+      border: none;
+      cursor: pointer;
+      min-width: 220px;
+      box-shadow: 0 6px 15px rgba(39, 174, 96, 0.4);
+      transition: background 0.3s, transform 0.3s;
+    }
+    .feature-btn:hover {
+      background: #219150;
+      transform: translateY(-5px);
+    }
+
+    /* Stats Section with animated counters */
+    .stats {
+      background: #27ae60;
+      color: white;
+      display: flex;
+      justify-content: space-around;
+      padding: 40px 0;
+      border-radius: 10px;
+      margin: 60px auto;
+      max-width: 1000px;
+    }
+    .stat {
+      text-align: center;
+    }
+    .stat h4 {
+      font-size: 2.5rem;
+      margin-bottom: 5px;
+    }
+    .stat p {
+      font-weight: 600;
+    }
+
+    /* Footer Navigation */
+    footer {
+      background: #2c3e50;
+      padding: 20px 0;
+      margin-top: 40px;
+      text-align: center;
+    }
+    footer nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: 600;
+      font-size: 1.1rem;
+      transition: color 0.3s;
+    }
+    footer nav a:hover {
+      color: #27ae60;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <h1>Clean & Green</h1>
+    <nav>
+      <ul>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#stats">Stats</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <h2>Smart Waste Segregation & Recycling</h2>
+  <p>Join us in creating cleaner, greener communities with technology-powered waste management.</p>
+  <a href="#features" class="btn">Explore Features</a>
+</section>
+
+
+<section id="features" class="section container">
+  <h3>Our Key Features</h3>
+  <div class="features">
+    <button class="feature-btn" onclick="location.href='citizen-training.html'">Citizen Training</button>
+    <button class="feature-btn" onclick="location.href='worker-training.html'">Worker Training</button>
+    <button class="feature-btn" onclick="location.href='community-monitoring.html'">Community Monitoring</button>
+    <button class="feature-btn" onclick="location.href='incentives.html'">Incentives</button>
+    <button class="feature-btn" onclick="location.href='technology.html'">Technology</button>
+    <button class="feature-btn" onclick="location.href='platform.html'">Platform</button>
+  </div>
+</section>
+
+
+
+
+</section>
+
+<section id="stats" class="stats container">
+  <div class="stat">
+    <h4 id="citizensCount">0</h4>
+    <p>Citizens Trained</p>
+  </div>
+  <div class="stat">
+    <h4 id="binsDeployed">0</h4>
+    <p>Smart Bins Deployed</p>
+  </div>
+  <div class="stat">
+    <h4 id="communities">0</h4>
+    <p>Communities Engaged</p>
+  </div>
+</section>
+
+<footer>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="citizen-training.html">Citizen Training</a>
+    <a href="worker-training.html">Worker Training</a>
+    <a href="community-monitoring.html">Community Monitoring</a>
+    <a href="incentives.html">Incentives</a>
+    <a href="technology.html">Technology</a>
+    <a href="platform.html">Platform</a>
+  </nav>
+</footer>
+
+<script>
+  // Animate counters
+  function animateCount(id, target) {
+    let count = 0;
+    const speed = Math.ceil(target / 100);
+    const element = document.getElementById(id);
+    function updateCount() {
+      count += speed;
+      if (count > target) count = target;
+      element.textContent = count.toLocaleString();
+      if (count < target) {
+        requestAnimationFrame(updateCount);
+      }
+    }
+    updateCount();
+  }
+  animateCount('citizensCount', 12500);
+  animateCount('binsDeployed', 3400);
+  animateCount('communities', 870);
+</script>
+
+</body>
+</html>
